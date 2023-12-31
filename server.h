@@ -3,7 +3,6 @@
 
 #include "event.h"
 #include "queue.h"
-//#include "scheduler.h"
 
 #include <math.h>
 #include <iostream>
@@ -16,8 +15,7 @@ class Server
         Server();
 
         void initialize ();
-        //Item* createJob ();
-		void arrivalHandler ();
+        void arrivalHandler ();
 		void departureHandler ();
 
 		void createTraceFile ();

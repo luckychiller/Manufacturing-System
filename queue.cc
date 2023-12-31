@@ -6,10 +6,8 @@ Queue::Queue()
 	length_ = 0;
 }
 
-void
-Queue :: enque (Item *im) {
-	//Item* it = tail_; not required
-
+void Queue :: enque (Item *im) {
+	
 	if (!tail_) {
 		head_ = tail_ = im;
 	} else {
@@ -21,8 +19,7 @@ Queue :: enque (Item *im) {
 	++length_;
 }
 
-Item*
-Queue :: dque () {
+Item* Queue :: dque () {
 	if (!head_)
 		return 0;
 
@@ -30,10 +27,10 @@ Queue :: dque () {
 
 	head_ = it->next_;
 
-	if (it == tail_) // last item is dequeued
+	if (it == tail_)
 		head_ = tail_ = 0;
 
-	--length_; // update the queue length
+	--length_; 
 
 	return it;
 }

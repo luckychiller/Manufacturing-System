@@ -7,6 +7,10 @@ class Scheduler
 {
     public:
         Scheduler();
+		
+		static double clock_;
+		static Event* eventList_;
+		static Scheduler* instance_;
 
         void run ();
 		void initialize ();
@@ -21,22 +25,13 @@ class Scheduler
 
         virtual ~Scheduler();
 
-    protected:
-
-
     private:
         void addEvent (Event *e);
         Event* removeEvent (Event* e);
 		Event* removeEvent ();
 
 		void updateClock (double t);
-		void trigger (Event* e); // trigger an event by removing it from the event list and calling the event handler
-
-    public: //need to check private works or not
-        static double clock_;
-		static Event* eventList_;
-		static Scheduler* instance_;
-
+		void trigger (Event* e); 
 
 };
 

@@ -1,7 +1,6 @@
 #ifndef EVENT_H
 #define EVENT_H
 
-
 class Server;
 
 class Event
@@ -22,13 +21,11 @@ class Event
 
 		Event* next_;
 
-        //virtual ~Event();
-
     protected:
         Server* server_;
 
     private:
-        int eventType_;	// represented by event id
+        int eventType_;	
 		double stime_;
 		double rtime_;
 };
@@ -51,5 +48,4 @@ class DepartureEvent : public Event
 		void handle ();
 };
 
-
-#endif // EVENT_H
+#endif 

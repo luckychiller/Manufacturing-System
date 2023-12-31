@@ -1,11 +1,9 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-
-// details of the jobs to be stored in the queue
 typedef struct ItemType {
 	int id_;
-	int type_; // type of the jobs
+	int type_;
 	double arrivalTime_;
 	double interarrivalTime_;
 
@@ -33,4 +31,4 @@ class Queue
 		Item *tail_;
 };
 
-#endif // QUEUE_H
+#endif 
