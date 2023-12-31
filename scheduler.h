@@ -1,29 +1,43 @@
-#ifndef scheduler_h
-#define scheduler_h
+#ifndef SCHEDULER_H
+#define SCHEDULER_H
 
 #include "event.h"
 
 class Scheduler
 {
-	private:
-		void addEvent (Event *e);
-		Event* removeEvent ();
-		void updateClock (double t);	
     public:
-		static Event* eventList_;
-		Scheduler ()
-        {
-            eventList_=0;
-            clock_=0;
-        }
-		void trigger ();
-		void run ();
+        Scheduler();
+
+        void run ();
+		void initialize ();
+
 		static double now ();
-		static Scheduler& instance ();		
-		void schedule (Event *e);
-		void cancel (Event *e);
-		static double clock_;
+		static Scheduler& instance ();
+
+		void activate (Event *e);
+		void deactivate (Event *e);
+		void cancel ();
+
+
+        virtual ~Scheduler();
+
+    protected:
+
+
+    private:
+        void addEvent (Event *e);
+        Event* removeEvent (Event* e);
+		Event* removeEvent ();
+
+		void updateClock (double t);
+		void trigger (Event* e); // trigger an event by removing it from the event list and calling the event handler
+
+    public: //need to check private works or not
+        static double clock_;
+		static Event* eventList_;
 		static Scheduler* instance_;
+
+
 };
 
-#endif    
+#endif // SCHEDULER_H

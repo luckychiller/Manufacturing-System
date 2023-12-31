@@ -1,0 +1,120 @@
+# depslib dependency file v1.0
+1693456997 source:d:\desktop\cse4550\ssq\event.cc
+	"event.h"
+	"server.h"
+	"scheduler.h"
+
+1693456997 d:\desktop\cse4550\ssq\event.h
+
+1694270565 d:\desktop\cse4550\ssq\server.h
+	"event.h"
+	"queue.h"
+	<math.h>
+	<iostream>
+	<fstream>
+
+1693456997 d:\desktop\cse4550\ssq\queue.h
+
+1693456997 d:\desktop\cse4550\ssq\scheduler.h
+	"event.h"
+
+1693456997 source:d:\desktop\cse4550\ssq\queue.cc
+	"queue.h"
+
+1693456997 source:d:\desktop\cse4550\ssq\scheduler.cc
+	"scheduler.h"
+	"event.h"
+	"iostream"
+
+1694271114 source:d:\desktop\cse4550\ssq\server.cc
+	"server.h"
+	"scheduler.h"
+	<malloc.h>
+	<time.h>
+	<cstdlib>
+	<iostream>
+	<fstream>
+	<iomanip>
+
+1694269230 source:d:\desktop\cse4550\ssq\main.cpp
+	<iostream>
+	<fstream>
+	"scheduler.h"
+	"server.h"
+
+1693456997 source:d:\desktop\cse4550\200041156_ssq\event.cc
+	"event.h"
+	"server.h"
+	"scheduler.h"
+
+1693456997 d:\desktop\cse4550\200041156_ssq\event.h
+
+1694306934 d:\desktop\cse4550\200041156_ssq\server.h
+	"event.h"
+	"queue.h"
+	<math.h>
+	<iostream>
+	<fstream>
+
+1693456997 d:\desktop\cse4550\200041156_ssq\queue.h
+
+1693456997 d:\desktop\cse4550\200041156_ssq\scheduler.h
+	"event.h"
+
+1693456997 source:d:\desktop\cse4550\200041156_ssq\queue.cc
+	"queue.h"
+
+1693456997 source:d:\desktop\cse4550\200041156_ssq\scheduler.cc
+	"scheduler.h"
+	"event.h"
+	"iostream"
+
+1694306151 source:d:\desktop\cse4550\200041156_ssq\main.cpp
+	<iostream>
+	<fstream>
+	"scheduler.h"
+	"server.h"
+
+1704002563 source:d:\desktop\sim\200041156_ssq (1)\200041156_ssq\event.cc
+	"event.h"
+	"server.h"
+	"scheduler.h"
+
+1704002563 d:\desktop\sim\200041156_ssq (1)\200041156_ssq\event.h
+
+1704010454 d:\desktop\sim\200041156_ssq (1)\200041156_ssq\server.h
+	"event.h"
+	"queue.h"
+	<math.h>
+	<iostream>
+	<fstream>
+
+1704002563 d:\desktop\sim\200041156_ssq (1)\200041156_ssq\queue.h
+
+1704002563 d:\desktop\sim\200041156_ssq (1)\200041156_ssq\scheduler.h
+	"event.h"
+
+1704005185 source:d:\desktop\sim\200041156_ssq (1)\200041156_ssq\main.cpp
+	<iostream>
+	<fstream>
+	"scheduler.h"
+	"server.h"
+
+1704002563 source:d:\desktop\sim\200041156_ssq (1)\200041156_ssq\queue.cc
+	"queue.h"
+
+1704002563 source:d:\desktop\sim\200041156_ssq (1)\200041156_ssq\scheduler.cc
+	"scheduler.h"
+	"event.h"
+	"iostream"
+
+1704005101 source:d:\desktop\sim\200041156_ssq (1)\200041156_ssq\server.cc
+	"server.h"
+	"scheduler.h"
+	<malloc.h>
+	<time.h>
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	<fstream>
+

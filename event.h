@@ -1,70 +1,55 @@
-#ifndef event_h
-#define event_h
+#ifndef EVENT_H
+#define EVENT_H
+
 
 class Server;
 
 class Event
 {
-	public:
-		Event (Server* s) : server (s) {
+    public:
+        Event (Server* s) : server_ (s) {
  			stime_ = 0.0;
 			rtime_ = 0.0;
 		}
-	
+
    		inline int& eventType () { return (eventType_); }
 		inline double& expire () { return (rtime_); }
 		inline double& start () { return (stime_); }
-		
-		void activate (double t)
-        {
-            Scheduler &s = Scheduler :: instance ();
-            stime_ = Scheduler :: now ();
-            rtime_ = stime_ + t;
 
-            s.schedule (this);
-        }		
-		void cancel ()
-        {
-            //Scheduler :: cancel (this);
-        }
-		void handle () {
-	        server->arrivalHandler ();
-        }
+		void schedule (double t);
+		void cancel ();
+		virtual void handle () = 0;
 
 		Event* next_;
-	protected:
-		Server* server;
-		
-	private:
-		int eventType_;	// represented by event id
+
+        //virtual ~Event();
+
+    protected:
+        Server* server_;
+
+    private:
+        int eventType_;	// represented by event id
 		double stime_;
 		double rtime_;
-		int status_;
-};  
+};
 
 class ArrivalEvent : public Event
 {
 	public:
- 		ArrivalEvent (Server* s) : Event(s) {} 
+ 		ArrivalEvent (Server* s) : Event(s) {
+            eventType() = 1;
+ 		}
 		void handle ();
 };
 
-class DepartureEvent : public Event 
+class DepartureEvent : public Event
 {
 	public:
-		DepartureEvent (Server* s) : Event(s) {}
+		DepartureEvent (Server* s) : Event(s) {
+            eventType () = 2;
+		}
 		void handle ();
 };
 
-#endif   
 
-
-
-
-
-
-
-
-
-
-        
+#endif // EVENT_H

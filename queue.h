@@ -1,57 +1,36 @@
-#ifndef queue_h
-#define queue_h
+#ifndef QUEUE_H
+#define QUEUE_H
 
+
+// details of the jobs to be stored in the queue
 typedef struct ItemType {
 	int id_;
+	int type_; // type of the jobs
+	double arrivalTime_;
+	double interarrivalTime_;
+
+	double delay_;
+	double serviceTime_;
+
 	ItemType *next_;
 } Item;
 
-
-class Queue 
+class Queue
 {
-	public:
-		Queue ()
-        {
-            head_ = tail_ = 0;
-            length_ = 0;
-        }
-		inline int& length () 
-        { 
-            return (length_); 
-        }
-		void enque (Item *im)
-        {
-            Item* it = tail_;
+    public:
+        Queue();
+        inline int& length () { return (length_); }
+		void enque (Item *im);
+		Item* dque ();
 
-            if (!tail_) {
-                head_ = tail_ = im;
-            } 
-            else {
-                tail_->next_ = im;
-                tail_ = im;
-            }
+        virtual ~Queue();
 
-            tail_->next_ = 0;
-            ++length_;
-        }
-		Item* deque ()
-        {
-            if (!head_)
-                return 0;
+    protected:
 
-            Item* it = head_;
-            head_ = it->next_;
-            if (it == tail_)
-                head_ = tail_ = 0;
-            --length_;
-
-            return it;
-        }
-		
-	private:
-		int length_;
+    private:
+        int length_;
 		Item *head_;
 		Item *tail_;
 };
 
-#endif    
+#endif // QUEUE_H
