@@ -118,3 +118,46 @@
 	<iomanip>
 	<fstream>
 
+1704002563 source:f:\manufacturing system\manufacturing-system\event.cc
+	"event.h"
+	"server.h"
+	"scheduler.h"
+
+1704002563 f:\manufacturing system\manufacturing-system\event.h
+
+1704010454 f:\manufacturing system\manufacturing-system\server.h
+	"event.h"
+	"queue.h"
+	<math.h>
+	<iostream>
+	<fstream>
+
+1704002563 f:\manufacturing system\manufacturing-system\queue.h
+
+1704002563 f:\manufacturing system\manufacturing-system\scheduler.h
+	"event.h"
+
+1704005185 source:f:\manufacturing system\manufacturing-system\main.cpp
+	<iostream>
+	<fstream>
+	"scheduler.h"
+	"server.h"
+
+1704002563 source:f:\manufacturing system\manufacturing-system\queue.cc
+	"queue.h"
+
+1704002563 source:f:\manufacturing system\manufacturing-system\scheduler.cc
+	"scheduler.h"
+	"event.h"
+	"iostream"
+
+1704025160 source:f:\manufacturing system\manufacturing-system\server.cc
+	"server.h"
+	"scheduler.h"
+	<malloc.h>
+	<time.h>
+	<cstdlib>
+	<iostream>
+	<iomanip>
+	<fstream>
+

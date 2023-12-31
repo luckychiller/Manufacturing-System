@@ -212,14 +212,14 @@ Server::updateEventList (int type, double value) {
     // ------------------------------------Task-9 (start)--------------------------------------------------
     // update the event list after arrival or departure
     if (type == 0) {
-        if (itemArrived_ < 1000) {
+        if (itemArrived_ < 500) {
             double t = exponential(arrivalMean_);
             a_.schedule(t);
         }
 
         d_.schedule(value);
     } else if (type == 1) {
-        if (itemArrived_ >= 1000) return;
+        if (itemArrived_ >= 500) return;
 
         double t = exponential(arrivalMean_);
         a_.schedule(t);
@@ -266,7 +266,7 @@ void
 Server::jobDeparture () {
     itemCompleted_++;
 
-    if (itemCompleted_ == 1000) {
+    if (itemCompleted_ == 500) {
         trace_.close();
 
         trace_.open ("TimeAvgVar.csv", ios::app);

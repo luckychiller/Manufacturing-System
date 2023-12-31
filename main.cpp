@@ -63,7 +63,7 @@ void carSimulation (double b_am, double b_dm, double A_dm, double P_dm, double T
 
 int main ()
 {
-    for (double i = 0.05; i < 1.05; i += 0.05)
+    for (double i = 0.2; i < 1.05; i += 0.2)
     {
         simulation(i, 1);
         carSimulation (i, 1, 1, 1, 1);
